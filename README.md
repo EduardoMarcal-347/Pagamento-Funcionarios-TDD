@@ -1,12 +1,23 @@
-![logoBee](https://user-images.githubusercontent.com/104870860/230803395-4172e222-40e7-44cc-8271-de4d682f1b72.PNG)
-<h1 align="center">Resoluçoes de  Exercícios</h1>
+
+![sistemaPagFunc](https://user-images.githubusercontent.com/104870860/231298166-f806c4c6-a45a-43da-9e4e-9660bec3570e.png)
+
+
+<h1 align="center">Sistema de gereciamento de Pagamentos de Funcionários</h1>
 
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
 
 ## Resumo 
-Desenvolvimento de exercicios visando aperfeiçoar as habilidades de lógica em diferentes linguagens.
+Sistema de gereciamento de Pagamentos de Funcionários para uma empresa que possui funcionários próprios e terceirizados. Para cada funcionário, deseja-se
+registrar nome, horas trabalhadas e valor por hora. Funcionários terceirizados possuem ainda uma
+despesa adicional.
+O pagamento dos funcionários corresponde ao valor da hora multiplicado pelas horas trabalhadas,
+sendo que os funcionários terceirizados ainda recebem um bônus correspondente a 110% de sua
+despesa adicional.
+
+## 🛠️ Objetivo 
+Praticar o desenvolvimento orientado a testes unitários com o objetivo de atingir as condiçoes estabelecidas pelo cliente e aperfeiçoar as habilidades usando TDD. 
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
