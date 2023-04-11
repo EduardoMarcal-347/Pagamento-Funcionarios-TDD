@@ -2,7 +2,7 @@
 ![sistemaPagFunc](https://user-images.githubusercontent.com/104870860/231298166-f806c4c6-a45a-43da-9e4e-9660bec3570e.png)
 
 
-<h1 align="center">Sistema de gereciamento de Pagamentos de Funcionários</h1>
+<h1 align="center">Sistema de Gereciamento de Pagamentos de Funcionários</h1>
 
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
@@ -25,7 +25,7 @@ Praticar o desenvolvimento orientado a testes unitários com o objetivo de ating
 - ``JUnit 5``
 
 ## 📁 Acesso ao projeto
-Para acessar os exercicios basta entrar na pasta da linguagem desejada e visualizar a resolução desejada.
+O acesso estará disponivel assim que finalizado.
 
 <h4 align="center"> 
     :construction:  Projeto em construção  :construction:
