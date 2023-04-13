@@ -16,5 +16,5 @@ public class Funcionario {
         this.valorHora = valorHora;
     }
 
-
+    
 }
