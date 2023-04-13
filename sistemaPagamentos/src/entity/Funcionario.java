@@ -16,5 +16,32 @@ public class Funcionario {
         this.valorHora = valorHora;
     }
 
-    
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getHorasTrabalhadas() {
+        return horasTrabalhadas;
+    }
+
+    public void setHorasTrabalhadas(int horasTrabalhadas) {
+        this.horasTrabalhadas = horasTrabalhadas;
+    }
+
+    public Double getValorHora() {
+        return valorHora;
+    }
+
+    public void setValorHora(Double valorHora) {
+        this.valorHora = valorHora;
+    }
+
+    public Double calcularPagamento(){
+        Double salario = horasTrabalhadas*valorHora;
+        return salario;
+    }
 }
