@@ -19,11 +19,30 @@ public class FuncionarioTest {
     }
 
     @Test
+    public void testaConstrutor(){
+        Funcionario funcionario = new Funcionario("Fernanda",200,125.50);
+        Assertions.assertEquals("Fernanda", funcionario.getNome());
+        Assertions.assertEquals(200, funcionario.getHorasTrabalhadas());
+        Assertions.assertEquals(125.50, funcionario.getValorHora());
+    }
+
+    @Test
     public void testaSetterNome(){
         funcionario.setNome("Julya");
         Assertions.assertEquals("Julya", funcionario.getNome());
     }
 
+    @Test
+    public void testaSetterHorasTrabalhadas(){
+        funcionario.setHorasTrabalhadas(140);
+        Assertions.assertEquals(140, funcionario.getHorasTrabalhadas());
+    }
 
+    @Test
+    public void testaSetterValorHora(){
+        funcionario.setValorHora(200.00);
+        Assertions.assertEquals(200.00,funcionario.getValorHora());
+    }
+    
 
 }
