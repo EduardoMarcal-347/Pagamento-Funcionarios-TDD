@@ -63,7 +63,11 @@ public class FuncionarioTest {
 
     @Test
     public void testaSetterHorasTrabalhadas(){
-        funcionario.setHorasTrabalhadas(140);
+        try {
+            funcionario.setHorasTrabalhadas(140);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         Assertions.assertEquals(140, funcionario.getHorasTrabalhadas());
     }
     @Test
@@ -75,7 +79,11 @@ public class FuncionarioTest {
 
     @Test
     public void testaSetterValorHora(){
-        funcionario.setValorHora(200.00);
+        try {
+            funcionario.setValorHora(200.00);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         Assertions.assertEquals(200.00,funcionario.getValorHora());
     }
 

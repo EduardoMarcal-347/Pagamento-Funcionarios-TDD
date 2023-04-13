@@ -28,7 +28,8 @@ public class Funcionario {
         return horasTrabalhadas;
     }
 
-    public void setHorasTrabalhadas(int horasTrabalhadas) {
+    public void setHorasTrabalhadas(int horasTrabalhadas) throws Exception {
+        validaEntradaNegativa(horasTrabalhadas);
         this.horasTrabalhadas = horasTrabalhadas;
     }
 
@@ -36,7 +37,8 @@ public class Funcionario {
         return valorHora;
     }
 
-    public void setValorHora(Double valorHora) {
+    public void setValorHora(Double valorHora) throws Exception {
+        validaEntradaNegativa(valorHora);
         this.valorHora = valorHora;
     }
 
@@ -44,4 +46,13 @@ public class Funcionario {
         Double salario = horasTrabalhadas*valorHora;
         return salario;
     }
+
+    public void validaEntradaNegativa(int valor) throws Exception {
+        if (valor<0) throw new Exception();
+    }
+
+    public void validaEntradaNegativa(Double valor) throws Exception {
+        if (valor<0) throw new Exception();
+    }
+
 }
