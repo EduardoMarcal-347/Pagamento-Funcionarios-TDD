@@ -9,6 +9,11 @@ public class FuncionarioTerceirizado extends Funcionario{
 
     public FuncionarioTerceirizado(String nome, int horasTrabalhadas, Double valorHora, Double despesasAdicionais) throws Exception {
         super(nome, horasTrabalhadas, valorHora);
+        try {
+            Validacao.validaDespesasAdicionais(despesasAdicionais);
+        } catch (Exception e) {
+            throw e;
+        }
         this.despesasAdicionais = despesasAdicionais;
     }
 
@@ -16,7 +21,8 @@ public class FuncionarioTerceirizado extends Funcionario{
         return despesasAdicionais;
     }
 
-    public void setDespesasAdicionais(Double despesasAdicionais) {
+    public void setDespesasAdicionais(Double despesasAdicionais) throws Exception {
+        Validacao.validaDespesasAdicionais(despesasAdicionais);
         this.despesasAdicionais = despesasAdicionais;
     }
 }
