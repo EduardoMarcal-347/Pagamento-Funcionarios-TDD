@@ -2,7 +2,6 @@ package test;
 
 import entity.Funcionario;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -110,7 +109,7 @@ public class FuncionarioTest {
         Assertions.assertEquals(salarioEsperado, funcionario.calcularPagamento());
     }
 
-    public void testaCalculoPagamentoMaiorSalarioMinimo() throws Exception {
+    public void testaCalculoPagamentoMenorSalarioMinimo() throws Exception {
         Double salarioMinimo = 1320.0;
 
         //valores que resultarão em um salario abaixo do minimo
