@@ -103,20 +103,22 @@ public class FuncionarioTest {
     }
 
     @Test
-    public void testaCalculoPagamento(){
+    public void testaCalculoPagamento() throws Exception {
         Double salarioEsperado = 2340.0;
 
         Assertions.assertEquals(salarioEsperado, funcionario.calcularPagamento());
     }
+
+    @Test
 
     public void testaCalculoPagamentoMenorSalarioMinimo() throws Exception {
         Double salarioMinimo = 1320.0;
 
         //valores que resultarão em um salario abaixo do minimo
         int horas = 40;
-        double valorHoras = 32.0;
+        double valorHoras = 60.0;
         Funcionario funcionarioA = new Funcionario("func", horas, valorHoras);
-
+        funcionarioA.setValorHora(32.0);
 
         Assertions.assertThrows(Exception.class, () -> {
             funcionarioA.calcularPagamento();

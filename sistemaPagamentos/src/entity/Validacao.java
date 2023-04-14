@@ -25,4 +25,8 @@ public class Validacao{
     public static void validaDespesasAdicionais(Double entrada) throws Exception {
         if(entrada>1000) throw new IllegalArgumentException("As despesas devem ser no máximo R$1000");
     }
+
+    public static void validaSalario(Double salario) throws Exception {
+        if(salario<1320) throw new IllegalArgumentException("O salário deve ser maior que R$1320");
+    }
 }

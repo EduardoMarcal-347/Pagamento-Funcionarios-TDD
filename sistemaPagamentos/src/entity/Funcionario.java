@@ -50,11 +50,10 @@ public class Funcionario {
         this.valorHora = valorHora;
     }
 
-    public Double calcularPagamento(){
+    public Double calcularPagamento() throws Exception {
         Double salario = horasTrabalhadas*valorHora;
+        Validacao.validaSalario(salario);
         return salario;
     }
-
-
 
 }

@@ -25,4 +25,11 @@ public class FuncionarioTerceirizado extends Funcionario{
         Validacao.validaDespesasAdicionais(despesasAdicionais);
         this.despesasAdicionais = despesasAdicionais;
     }
+
+    @Override
+    public Double calcularPagamento() throws Exception {
+        Double salario = (getHorasTrabalhadas()*getValorHora())+despesasAdicionais;
+        Validacao.validaSalario(salario);
+        return salario;
+    }
 }
