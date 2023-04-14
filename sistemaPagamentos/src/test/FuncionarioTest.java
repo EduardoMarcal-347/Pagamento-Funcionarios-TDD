@@ -15,20 +15,23 @@ public class FuncionarioTest {
     private Funcionario funcionario;
     @BeforeEach
     public void inicializaCenario(){
-        funcionario = new Funcionario("Julia",39,60.0);
+        try {
+            funcionario = new Funcionario("Julia",39,60.0);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Test
-    public void testaConstrutor(){
+    public void testaConstrutor() throws Exception {
         String nome = "Fernanda";
         int horasTrabalhadas = 40;
-        Double valorHoras = 52.8;
-
-        Funcionario funcionarioA = new Funcionario(nome, horasTrabalhadas, valorHoras);
+        Double valorHoras = 52.81;
+        Funcionario funcionarioA = new Funcionario(nome, horasTrabalhadas, valorHoras);;
 
         Assertions.assertEquals("Fernanda", funcionarioA.getNome());
         Assertions.assertEquals(40, funcionarioA.getHorasTrabalhadas());
-        Assertions.assertEquals(52.8, funcionarioA.getValorHora());
+        Assertions.assertEquals(52.81, funcionarioA.getValorHora());
     }
 
     @Test
@@ -50,7 +53,11 @@ public class FuncionarioTest {
 
     @Test
     public void testaSetterNome(){
-        funcionario.setNome("Julya");
+        try {
+            funcionario.setNome("Julya");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         Assertions.assertEquals("Julya", funcionario.getNome());
     }
 
@@ -68,6 +75,7 @@ public class FuncionarioTest {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
         Assertions.assertEquals(140, funcionario.getHorasTrabalhadas());
     }
     @Test
@@ -84,6 +92,7 @@ public class FuncionarioTest {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
         Assertions.assertEquals(200.00,funcionario.getValorHora());
     }
 
@@ -101,14 +110,12 @@ public class FuncionarioTest {
         Assertions.assertEquals(salarioEsperado, funcionario.calcularPagamento());
     }
 
-    @Test
-    public void testaCalculoPagamentoMaiorSalarioMinimo(){
+    public void testaCalculoPagamentoMaiorSalarioMinimo() throws Exception {
         Double salarioMinimo = 1320.0;
 
         //valores que resultarão em um salario abaixo do minimo
         int horas = 40;
         double valorHoras = 32.0;
-
         Funcionario funcionarioA = new Funcionario("func", horas, valorHoras);
 
 
