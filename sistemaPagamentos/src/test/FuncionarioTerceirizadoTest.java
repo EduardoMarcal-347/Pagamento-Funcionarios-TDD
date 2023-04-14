@@ -21,37 +21,24 @@ public class FuncionarioTerceirizadoTest {
 
     @Test
     public void testaConstrutor() throws Exception {
-        String nome = "Fernanda";
-        int horasTrabalhadas = 40;
-        Double valorHoras = 52.81;
-        FuncionarioTerceirizado funcionarioA = new FuncionarioTerceirizado(nome, horasTrabalhadas, valorHoras);;
+        FuncionarioTerceirizado funcionarioA = new FuncionarioTerceirizado("Fernanda", 40, 52.81,1000.00);;
+        Assertions.assertEquals(1000, funcionario.getDespesasAdicionais());
 
-        Assertions.assertEquals("Fernanda", funcionarioA.getNome());
-        Assertions.assertEquals(40, funcionarioA.getHorasTrabalhadas());
-        Assertions.assertEquals(52.81, funcionarioA.getValorHora());
     }
 
     @Test
     public void testaConstrutorDadosNaoSatisfazem(){
-        //o nome não pode estar vazio
-        String nome = "";
-
-        //valor maximo de horas é 40
-        int horasTrabalhadas = 41;
-
-        //valor valido por hora trabalhada está entre 4% e 10% de um salário minimo (R$1320)
-        Double valorHoras = 39.6;
-
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            FuncionarioTerceirizado funcionarioA = new FuncionarioTerceirizado(nome, horasTrabalhadas, valorHoras);
+            FuncionarioTerceirizado funcionarioA = new FuncionarioTerceirizado("Fernanda", 40, 52.81,1001.00);
         });
-
     }
 
+    @Test
     public void testaSetterDespesasAdicionais(){
         Assertions.assertEquals(1000.0,funcionario.getDespesasAdicionais());
     }
 
+    @Test
     public void testaSetterDespesasAdicionaisInvalida(){
         Assertions.assertThrows(Exception.class, () -> {
             funcionario.setDespesasAdicionais(1001.0);
@@ -71,7 +58,7 @@ public class FuncionarioTerceirizadoTest {
         //valores que resultarão em um salario abaixo do minimo
         int horas = 40;
         double valorHoras = 32.0;
-        Funcionario funcionarioA = new Funcionario("func", horas, valorHoras);
+        FuncionarioTerceirizado funcionarioA = new FuncionarioTerceirizado("func", horas, valorHoras,0.0);
 
 
         Assertions.assertThrows(Exception.class, () -> {

@@ -21,4 +21,8 @@ public class Validacao{
     public static void validaValorHoras(Double entrada) throws Exception{
         if(entrada<1320*0.04 || entrada>1320*0.10) throw new IllegalArgumentException("O valor das horas deve estar entre 4% e 10% do salario minimo(R$1320)");
     }
+
+    public static void validaDespesasAdicionais(Double entrada) throws Exception {
+        if(entrada>1000) throw new IllegalArgumentException("As despesas devem ser no máximo R$1000");
+    }
 }
