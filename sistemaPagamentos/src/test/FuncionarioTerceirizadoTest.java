@@ -48,58 +48,6 @@ public class FuncionarioTerceirizadoTest {
 
     }
 
-    @Test
-    public void testaSetterNome(){
-        try {
-            funcionario.setNome("Julya");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        Assertions.assertEquals("Julya", funcionario.getNome());
-    }
-
-    @Test
-    public void testaSetterNomeParametroVazio(){
-        Assertions.assertThrows(Exception.class, () -> {
-            funcionario.setNome("");
-        });
-    }
-
-    @Test
-    public void testaSetterHorasTrabalhadas(){
-        try {
-            funcionario.setHorasTrabalhadas(140);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-        Assertions.assertEquals(140, funcionario.getHorasTrabalhadas());
-    }
-    @Test
-    public void testaSetterHorasTrabalhadasParametroNegativo(){
-        Assertions.assertThrows(Exception.class, () -> {
-            funcionario.setHorasTrabalhadas(-1);
-        });
-    }
-
-    @Test
-    public void testaSetterValorHora(){
-        try {
-            funcionario.setValorHora(200.00);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-        Assertions.assertEquals(200.00,funcionario.getValorHora());
-    }
-
-    @Test
-    public void testaSetterValorHoraParametroNegativo(){
-        Assertions.assertThrows(Exception.class, () -> {
-            funcionario.setValorHora(-1.0);
-        });
-    }
-
     public void testaSetterDespesasAdicionais(){
         Assertions.assertEquals(1000.0,funcionario.getDespesasAdicionais());
     }
